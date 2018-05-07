@@ -1,0 +1,60 @@
+﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="studentref" type="xs:string"/>
+  <xs:element name="coursename" type="xs:string"/>
+  <xs:element name="duration" type="xs:integer"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="enrolled">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="studentref" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="course">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="coursename" minOccurs="0"/>
+        <xs:element ref="duration" minOccurs="0"/>
+        <xs:element ref="description" minOccurs="0"/>
+        <xs:element ref="enrolled" minOccurs="0"/>
+        <xs:element ref="courseref" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="id" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="courseref" type="xs:string"/>
+  <xs:element name="studentname" type="xs:string"/>
+  <xs:element name="age" type="xs:integer"/>
+  <xs:element name="student">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="studentname"/>
+        <xs:element ref="age"/>
+        <xs:element ref="course"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="courses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="course" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="students">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="student" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="school">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="courses"/>
+        <xs:element ref="students"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

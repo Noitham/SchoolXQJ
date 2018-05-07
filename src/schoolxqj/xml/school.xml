@@ -1,0 +1,78 @@
+﻿<school xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="school.xsd">
+    <courses>
+        <course id="M03">
+            <coursename>Programacio</coursename>
+            <duration>198</duration>
+            <description>M03 - Programacio</description>
+            <enrolled>
+                <studentref>a1</studentref>
+                <studentref>a2</studentref>
+                <studentref>a3</studentref>
+            </enrolled>
+        </course>
+        <course id="M06">
+            <coursename>Acces a dades</coursename>
+            <duration>99</duration>
+            <description>M06 - Acces a dades</description>
+            <enrolled>
+                <studentref>a1</studentref>
+                <studentref>a2</studentref>
+                <studentref>a3</studentref>
+            </enrolled>
+        </course>
+        <course id="M08">
+            <coursename>Programacio multimedia Apps Mobils</coursename>
+            <duration>99</duration>
+            <description>M08 - Programacio multimedia Apps Mobils</description>
+            <enrolled>
+                <studentref>a4</studentref>
+            </enrolled>
+        </course>
+        <course id="M10">
+            <coursename>Sistemes de gestio empresarial</coursename>
+            <duration>99</duration>
+            <description>M10 - Sistemes de gestio empresarial</description>
+            <enrolled>
+            </enrolled>
+        </course>
+    </courses>
+    <students>
+        <student id="a1">
+            <studentname>David</studentname>
+            <age>17</age>
+            <course>
+                <courseref>M03</courseref>
+                <courseref>M06</courseref>
+            </course>
+        </student>
+        <student id="a2">
+            <studentname>Josep</studentname>
+            <age>20</age>
+            <course>
+                <courseref>M03</courseref>
+                <courseref>M06</courseref>
+            </course>
+        </student>
+        <student id="a3">
+            <studentname>Guillermo</studentname>
+            <age>22</age>
+            <course>
+                <courseref>M03</courseref>
+                <courseref>M06</courseref>
+            </course>
+        </student>
+        <student id="a4">
+            <studentname>Ramon</studentname>
+            <age>25</age>
+            <course>
+                <courseref>M08</courseref>
+            </course>
+        </student>
+        <student id="a5">
+            <studentname>Dani</studentname>
+            <age>27</age>
+            <course>
+            </course>
+        </student>
+    </students>
+</school>
